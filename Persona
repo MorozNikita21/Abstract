@@ -1,0 +1,19 @@
+public class Persona extends Telephon{
+    String fam;
+    Persona(String fam, String adress, int nomer){
+        this.fam = fam;
+        this.adress = adress;
+        this.nomer = nomer;
+    }
+    public boolean prov(String f){
+        if(fam.equals(f))
+            return true;
+        else
+            return false;
+    }
+    void print(){
+        System.out.println("Фам: " + fam);
+        System.out.println("Адр: " + adress);
+        System.out.println("Ном: " + nomer);
+    }
+}
