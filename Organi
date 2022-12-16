@@ -1,0 +1,25 @@
+public class Organi extends Telephon{
+    String org;
+    int faks;
+    String lico;
+    Organi(String org, String adress, int nomer, int faks, String lico){
+        this.org = org;
+        this.adress = adress;
+        this.nomer = nomer;
+        this.faks = faks;
+        this.lico = lico;
+    }
+    public boolean prov(String f){
+        if(org.equals(f))
+            return true;
+        else
+            return false;
+    }
+    void print(){
+        System.out.println("Орг: " + org);
+        System.out.println("Адр: " + adress);
+        System.out.println("Ном: " + nomer);
+        System.out.println("Факс: " + faks);
+        System.out.println("Лицо: " + lico);
+    }
+}
