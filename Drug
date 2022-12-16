@@ -1,0 +1,22 @@
+public class Drug extends Telephon{
+    String fam;
+    int datar;
+    Drug(String fam, String adress, int nomer, int datar){
+        this.fam = fam;
+        this.adress = adress;
+        this.nomer = nomer;
+        this.datar = datar;
+    }
+    public boolean prov(String f){
+        if(fam.equals(f))
+            return true;
+        else
+            return false;
+    }
+    void print(){
+        System.out.println("Фам: " + fam);
+        System.out.println("Адр: " + adress);
+        System.out.println("Ном: " + nomer);
+        System.out.println("Дата: " + datar);
+    }
+}
