@@ -1,0 +1,8 @@
+public abstract class Telephon {
+    String adress;
+    int nomer;
+    public abstract boolean prov(String fam);
+    void print(){
+        System.out.println("Данный объект имеет адрес и номер");
+    }
+}
