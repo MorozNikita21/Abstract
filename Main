@@ -1,0 +1,50 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введи количество объектов: ");
+        int n = sc.nextInt();
+        Telephon [] mas = new Telephon[n];
+        for (int jiv = 0; jiv < mas.length; jiv++){
+            System.out.println("1 - персона, 2 - орган, 3 - друг");
+            int p = sc.nextInt();
+            if (p==1){
+                String x = sc.next();
+                String y = sc.next();
+                int z = sc.nextInt();
+                Persona per = new Persona(x,y,z);
+                mas[jiv] = per;
+            }
+            else if(p==2){
+                String x = sc.next();
+                String y = sc.next();
+                int z = sc.nextInt();
+                int j = sc.nextInt();
+                String i = sc.next();
+                Organi o = new Organi(x,y,z, j, i);
+                mas[jiv] = o;
+            }
+            else if(p==3) {
+                String x = sc.next();
+                String y = sc.next();
+                int z = sc.nextInt();
+                int j = sc.nextInt();
+                Drug d = new Drug(x, y, z, j);
+                mas[jiv] = d;
+            }
+        }
+        System.out.println("Введите фамилию или название организации для проверки");
+        String f = sc.next();
+        int k = 0;
+        for (int jiv = 0; jiv < mas.length; jiv ++){
+            if(mas[jiv].prov(f)) k = 1;
+        }
+        if (k==1) System.out.println("Есть");
+        else  System.out.println("Нету");
+        System.out.println();
+        for (int jiv = 0; jiv < mas.length; jiv++){
+            mas[jiv].print();
+            System.out.println();
+        }
+    }
+}
